@@ -15,7 +15,7 @@
         $(function () {
             $("button").click(function () {
                 $.get("http://localhost:8080/resthello", function (data) {
-                    alert("Data: " + data);
+                    $("#hello").text("Data: " + data);
                 })
             })
         })
@@ -24,6 +24,7 @@
 
 <body>
     <button class="btn btn-primary">Click</button>
+    <h1 id="hello"></h1>
 </body>
 
 </html>
