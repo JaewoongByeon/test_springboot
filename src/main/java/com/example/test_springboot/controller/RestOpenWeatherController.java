@@ -11,10 +11,10 @@ public class RestOpenWeatherController {
     @RequestMapping(value = "/remote/openweather")
     public Object actionMethod() {
         RestTemplate restTemplate = new RestTemplate();
-        Object tempObject = new Object();
+        Object resultObject = new Object();
         String keyId = "884012cf97a0e88c53af7962cf5a0ad8";
         String targetUri = "https://api.openweathermap.org/data/2.5/weather?q=Seoul&appid=" + keyId;
-        Object resultObject = restTemplate.getForObject(targetUri, Object.class);
+        resultObject = restTemplate.getForObject(targetUri, Object.class);
         return resultObject;
     }
 }
